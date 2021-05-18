@@ -24,8 +24,8 @@ def ej1():
     # Realizar una funcion lambda que eleve al cuadrado
     # el número pasado como parámetro
 
-    # potencia_2 = lambda x:......
-    # pot_3 = potencia_2(3)
+    potencia_2 = lambda x: x**2
+    pot_3 = potencia_2(3)
 
     # 2)
     # Utilice la función map para mapear una lambda expression
