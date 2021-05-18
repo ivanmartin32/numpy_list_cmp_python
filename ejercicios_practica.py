@@ -41,7 +41,8 @@ def ej1():
     # Lista de numeros
     numeros = [1, -5, 4, 3]
 
-    # numeros_potencia = list(map....)
+    numeros_potencia = list(map(lambda x: x**2, numeros))
+    
 
 
 def ej2():
