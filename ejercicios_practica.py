@@ -82,7 +82,7 @@ def ej3():
     # números, conteniendo del 0 al 10 inclusive
 
     lista_0_10 = list(range(0,11))
-    #print(lista_0_10)
+    # no imprimi la lista porque no lo solicitaron print(lista_0_10)
     
     # 2)
     # Generar una lista a partir de comprensión de listas,
@@ -96,7 +96,7 @@ def ej3():
     # elemento lo multipliquen x5.
 
     tabla_5 = [5*x for x in lista_0_10]
-    print(tabla_5)
+    # no imprimi la lista porque no lo solicitaron print(tabla_5)
 
     # 3)
     # Generar una lista a partir de comprensión de listas,
@@ -108,7 +108,7 @@ def ej3():
     # https://docs.python.org/3/library/random.html
 
     dias_mes = [random.randrange(1,31) for x in range(10)]
-    print(dias_mes)
+    # no imprimi la lista porque no lo solicitaron print(dias_mes)
 
 
 def ej4():
@@ -123,12 +123,18 @@ def ej4():
     # reemplazar dicho str "no numérico" por 0
     # TIP: Recomendamos ver el método "isdigit" de strings
     # para aplicar en este caso.
-    list_numeros_str = ['5', '2', '3', '', '7', 'NaN']
+    list_numeros_str = ['5', '2', '3', '', '7', 'NaN', '-1']
 
+    lista = [int(x) if x.isdigit() else 0 for x in list_numeros_str]
+    # no imprimi la lista porque no lo solicitaron print(lista)
 
     # ¿Ya terminaron el ejercicio? ¿Por qué no prueban
     # hacer negativo alguno de los números de la lista?
-    # ¿Qué sucede con isdigit? Sorprendente no?    
+    # ¿Qué sucede con isdigit? Sorprendente no?   
+
+    """ Si se coloca un numero negativo el isdigit lo toma como false
+    y devuelve un 0 en este caso, probé agregando a la lista el numero -1
+    """ 
 
 
 def ej5():
@@ -195,6 +201,6 @@ if __name__ == '__main__':
     ej1()
     ej2()
     ej3()
-    # ej4()
+    ej4()
     # ej5()
     # ej6()
