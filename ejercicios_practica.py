@@ -153,8 +153,8 @@ def ej5():
     # De la lista resultante informar cuantas personas/personal
     # comprendido en dicho rango pasó por ese molinete
 
-    personal_1_10 = [x for x in accesos if x < 11]
-    print(len(personal_1_10))
+    personal_1_10 = len([x for x in accesos if x < 11])
+    print(personal_1_10)
 
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
@@ -166,7 +166,8 @@ def ej5():
     # TIP: Utilizar el operador "in" para chequear si un ID de accesos está
     # dentro de "id_validos"
 
-    # personal_valido = [.....]
+    personal_valido = [x for x in accesos if x == x in id_validos]
+    print(personal_valido)
 
 
 def ej6():
