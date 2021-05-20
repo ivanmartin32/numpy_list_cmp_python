@@ -153,7 +153,8 @@ def ej5():
     # De la lista resultante informar cuantas personas/personal
     # comprendido en dicho rango pasó por ese molinete
 
-    # personal_1_10 = [.....]
+    personal_1_10 = [x for x in accesos if x < 11]
+    print(len(personal_1_10))
 
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
@@ -202,5 +203,5 @@ if __name__ == '__main__':
     ej2()
     ej3()
     ej4()
-    # ej5()
+    ej5()
     # ej6()
