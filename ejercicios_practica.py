@@ -16,6 +16,7 @@ __email__ = "alumnos@inove.com.ar"
 __version__ = "1.3"
 
 import numpy as np
+import random
 
 
 def ej1():
@@ -80,8 +81,8 @@ def ej3():
     # esta lista generada deberá tener un tamaño de 11
     # números, conteniendo del 0 al 10 inclusive
 
-    # lista_0_10 = [......]
-
+    lista_0_10 = [0,1,2,3,4,5,6,7,8,9,10]
+    
     # 2)
     # Generar una lista a partir de comprensión de listas,
     # esta lista generada deberá contener la tabla del 5,
@@ -93,7 +94,8 @@ def ej3():
     # del 0 al 10 (como el ejer anterior) pero que cada
     # elemento lo multipliquen x5.
 
-    # tabla_5 = [......]
+    tabla_5 = [5*x for x in lista_0_10]
+    print(tabla_5)
 
     # 3)
     # Generar una lista a partir de comprensión de listas,
@@ -104,7 +106,8 @@ def ej3():
     # o randint para generar números aleatorios.
     # https://docs.python.org/3/library/random.html
 
-    # dias_mes = [.....]
+    dias_mes = [random.randrange(1,31) for x in range(10)]
+    print(dias_mes)
 
 
 def ej4():
@@ -190,7 +193,7 @@ if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
     ej2()
-    # ej3()
+    ej3()
     # ej4()
     # ej5()
     # ej6()
