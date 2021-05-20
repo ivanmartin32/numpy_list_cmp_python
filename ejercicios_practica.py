@@ -54,8 +54,8 @@ def ej2():
     # (len) de un string pasado como parámetro
 
     len_string = lambda x: len(x)
-    palabra = len_string('expression') # puse la primera palabra que se me ocurrio
-    # print(palabra)
+    palabra = len_string(str(input('Ingrese Palabra \n'))) 
+    print(palabra)
 
     # 2)
     # Lista de string
