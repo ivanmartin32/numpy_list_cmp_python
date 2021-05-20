@@ -81,7 +81,8 @@ def ej3():
     # esta lista generada deberá tener un tamaño de 11
     # números, conteniendo del 0 al 10 inclusive
 
-    lista_0_10 = [0,1,2,3,4,5,6,7,8,9,10]
+    lista_0_10 = list(range(0,11))
+    #print(lista_0_10)
     
     # 2)
     # Generar una lista a partir de comprensión de listas,
