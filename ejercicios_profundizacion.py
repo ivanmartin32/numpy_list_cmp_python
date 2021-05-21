@@ -16,6 +16,7 @@ __email__ = "alumnos@inove.com.ar"
 __version__ = "1.1"
 
 import numpy as np
+import random
 
 
 def ej1():
@@ -41,8 +42,25 @@ def ej1():
 
     Realizar este proceso iterativo hasta cumplir el objetivo
     '''
-
-
+    
+    lista = [random.randrange(1,11) for x in range(3)]
+    sumar = np.sum(lista)
+    while sumar > 21:
+        print('La lista tomada automaticamente es:', lista)
+        lista = [random.randrange(1,11) for x in range(3)]
+        sumar = np.sum(lista)
+        
+    if sumar <= 21:
+        print('la suma de la lista automatica es:', sumar,
+                'de los numeros de la lista:', lista)
+        
+   
+   
+   
+   
+    
+            
+                                                                    
 def ej2():
     print('Comenzamos a ponernos serios!')
 
@@ -151,7 +169,7 @@ def ej5():
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    # ej1()
+    ej1()
     # ej2()
     # ej3()
     # ej4()
