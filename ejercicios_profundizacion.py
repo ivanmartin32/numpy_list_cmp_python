@@ -17,7 +17,7 @@ __version__ = "1.1"
 
 import numpy as np
 import random
-
+import numpy as math
 
 def ej1():
     print('Comenzamos a divertirnos!')
@@ -94,16 +94,18 @@ def ej3():
     # NO utilizar comprensión de listas, solo utilice la
     # funcion de numpy "np.sin"
 
-    # y_nump =
+    y_nump = np.sin(x)
+    print(y_nump)
 
     # Conjunto de valores "X" en una lista
     x = list(np.arange(0, 2*np.pi, 0.1))
-
+    
     # Utilizar comprensión de listas para obtener la lista
     # "y_list" que tenga todos los valores obtenidos como resultado
     # de someter cada valor de "X" a la función math.sin
 
-    # y_list =
+    y_list =[math.sin(x) for x in x]
+    print(y_list)
 
     # Este es un ejemplo práctico de cuando es útil usar numpy,
     # basicamente siempre que deseen utilizar una función matemática
@@ -167,6 +169,6 @@ if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
     ej2()
-    # ej3()
+    ej3()
     # ej4()
     # ej5()
