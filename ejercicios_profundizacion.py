@@ -53,14 +53,7 @@ def ej1():
     if sumar <= 21:
         print('la suma de la lista automatica es:', sumar,
                 'de los numeros de la lista:', lista)
-        
-   
-   
-   
-   
-    
-            
-                                                                    
+                                                                                   
 def ej2():
     print('Comenzamos a ponernos serios!')
 
@@ -78,6 +71,9 @@ def ej2():
     nombres = ['Tamara', 'Marcelo', 'Martin', 'Juan', 'Alberto', 'Exequiel',
                'Alejandro', 'Leonel', 'Antonio', 'Omar', 'Antonia', 'Amalia',
                'Daniela', 'Sofia', 'Celeste', 'Ramon', 'Jorgelina', 'Anabela']
+
+    nombres_filtrados = [n for n in nombres if any(p in n for p in padron)]
+    print(nombres_filtrados)
 
     # Se espera obtener:
     # ['Tamara', 'Juan', 'Alberto'......]
@@ -170,7 +166,7 @@ def ej5():
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
+    ej2()
     # ej3()
     # ej4()
     # ej5()
