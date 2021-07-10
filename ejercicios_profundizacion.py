@@ -140,6 +140,9 @@ def ej4():
     # de diccionarios que tiene un parametro configurable respecto
     # que sucede sino encuentra la "key" en el diccionario.
 
+    lista_compra_productos = [(producto.get(x) if (producto.__contains__(x) is True) else 'NaN') for x in lista_compra_id]
+    print(lista_compra_productos)
+    
 
 def ej5():
     print("Ahora sí! buena suerte :)")
@@ -163,12 +166,61 @@ def ej5():
     dos jugadores y compitan para ver quien sacá la suma de números
     más cercanos a 21 sin pasarse!
     '''
+    print('jugador 1')
+    jugador1 = 0
+    
+    cartas = [random.randint(1,10) for x in range(2)]
+    print('Las cartas son', cartas)
+    suma_cartas = np.sum(cartas)
+    print('La suma de las cartas es', suma_cartas)
+    pedir = input('¿Desea cartas? s/n \n')
+    while pedir == 's':
+        pedir_carta = [random.randint(1,10) for x in range(1)]
+        print('La carta es', pedir_carta)
+        suma_cartas = suma_cartas + pedir_carta
+        print('La suma de las cartas es', suma_cartas)
+        if suma_cartas <= 21:    
+            pedir = input('¿Desea cartas? s/n \n')
+        else:
+            print('Perdiste, superaste 21')
+            break
+    if pedir == 'n':
+        jugador1 = suma_cartas
+        print('El jugador 1 se quedo con', jugador1)
 
+    print('jugador 2')
+    jugador2 = 0
+
+    cartas2 = [random.randint(1,10) for x in range(2)]
+    print('Las cartas son', cartas2)
+    suma_cartas2 = np.sum(cartas2)
+    print('La suma de las cartas es', suma_cartas2)
+    pedir = input('¿Desea cartas? s/n \n')
+    while pedir == 's':
+        pedir_carta2 = [random.randint(1,10) for x in range(1)]
+        print('La carta es', pedir_carta2)
+        suma_cartas2 = suma_cartas2 + pedir_carta2
+        print('La suma de las cartas es', suma_cartas2)
+        if suma_cartas2 <= 21:    
+            pedir = input('¿Desea cartas? s/n \n')
+        else:
+            print('Perdiste, superaste 21')
+            break
+    if pedir == 'n':
+        jugador2 = suma_cartas2
+        print('El jugador 2 se quedo con', jugador2)
+
+    if jugador1 > jugador2:
+        print('Gano el jugador 1')
+    elif jugador1 < jugador2:
+        print('Gano el jugador 2') 
+    else:
+        print('Empataron')
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
     ej2()
     ej3()
-    # ej4()
-    # ej5()
+    ej4()
+    ej5()

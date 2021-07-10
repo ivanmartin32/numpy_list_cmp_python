@@ -55,7 +55,7 @@ def ej2():
 
     len_string = lambda x: len(x)
     palabra = len_string(str(input('Ingrese Palabra \n'))) 
-    # print(palabra)
+    print(palabra)
 
     # 2)
     # Lista de string
@@ -72,7 +72,7 @@ def ej2():
     # directamente la lambda.
 
     palabras_len = list(map(lambda x: len(x), palabras))
-    # print(palabras_len)
+    print(palabras_len)
 
 
 def ej3():
@@ -127,7 +127,7 @@ def ej4():
     list_numeros_str = ['5', '2', '3', '', '7', 'NaN', '-1']
 
     lista = [int(x) if x.isdigit() else 0 for x in list_numeros_str]
-    # print(lista)
+    print(lista)
 
     # ¿Ya terminaron el ejercicio? ¿Por qué no prueban
     # hacer negativo alguno de los números de la lista?
@@ -155,7 +155,7 @@ def ej5():
     # comprendido en dicho rango pasó por ese molinete
 
     personal_1_10 = len([x for x in accesos if x < 11])
-    #print(personal_1_10)
+    print(personal_1_10)
 
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
@@ -168,7 +168,7 @@ def ej5():
     # dentro de "id_validos"
 
     personal_valido = [x for x in accesos if x == x in id_validos]
-    #print(personal_valido)
+    print(personal_valido)
 
 
 def ej6():
@@ -200,10 +200,10 @@ def ej6():
 
     multiplo_5_0 = np.where((nuevo_array % 5) == 0, 0, nuevo_array)
     
-    #print(nuevo_array)
-    #print(suma)
-    #print(diferencia)
-    #print(multiplo_5_0)
+    print(nuevo_array)
+    print(suma)
+    print(diferencia)
+    print(multiplo_5_0)
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
