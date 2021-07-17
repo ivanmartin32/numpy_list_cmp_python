@@ -217,6 +217,8 @@ def ej5():
     else:
         print('Empataron')
 
+    
+
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
